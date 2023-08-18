@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+#app {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -12rem;
+}
+button {
+    background: none;
+    border: none;
+}
+.cards {
+    display: grid;
+    grid-template: 
+    "a b"
+    "c d";
+    gap: 32px;
+    margin-left: 190px;
+}
+#timer {
+    display: flex;
+    color: #323238;
+    text-align: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 126px;
+    font-weight: 500;
+}
+#controls {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+#toggle-mode img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+img {
+    cursor: pointer;
+}
+#card1.selected {
+    content: url(./assets/selected/c1.svg);
+}
+#card2.selected {
+    content: url(./assets/selected/c2.svg);
+}
+#card3.selected {
+    content: url(./assets/selected/c3.svg);
+}
+#card4.selected {
+    content: url(./assets/selected/c4.svg);
+}
+
+/* darkmode */
+
+html.dark {
+    color: white;
+    background-color: #323238;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html.dark .moon,
+html:not(.dark) .sun {
+    display: none;
+}
+html.dark #controls, 
+html.dark #card1,
+html.dark #card2,
+html.dark #card3,
+html.dark #card4{
+    filter: invert(1);
+}
+html.dark #toggle-mode img{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    filter: invert(1);
+}
+
+html.dark #timer {
+    color: white;
+}
+
+html.dark #card1.selected {
+    content: url(./assets/selected/c1.svg);
+    filter: invert(0);
+}
+html.dark #card2.selected {
+    content: url(./assets/selected/c2.svg);
+    filter: invert(0);
+}
+html.dark #card3.selected {
+    content: url(./assets/selected/c3.svg);
+    filter: invert(0);
+}
+html.dark #card4.selected {
+    content: url(./assets/selected/c4.svg);
+    filter: invert(0);
+}
+
+@media(max-width: 850px){
+    #app {
+        margin-top: -28rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards {
+        margin-top: 40px;
+        margin-left: 0;
+        gap:16px;
+    }
+    .cards span img{
+        width: 80px;
+    }
+    #controls {
+        gap: 20px;
+    }
+    #timer {
+        font-size: 90px
+    }
+    #toggle-mode img,
+    html.dark #toggle-mode img{
+        height: 25px;
+        width: 25px;
+    }
+}

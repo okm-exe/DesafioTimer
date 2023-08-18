@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Timer</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <button id="toggle-mode">
+            <img src="./assets/sun.svg" class="sun">
+            <img src="./assets/moon.svg" class="moon">
+        </button>
+        <div class="main-timer" id="main-timer">
+            <section id="timer" class="onc">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+            <section id="controls">
+                <button 
+                    class="startTimer">
+                    <img data-action="startTimer" src="./assets/play.svg" alt="">
+                </button>
+                <button 
+                    class="stopTimer">
+                    <img data-action="stopTimer" src="./assets/stop.svg" alt="">
+                </button>
+                <button 
+                    class="plus5">
+                    <img data-action="plus5" src="./assets/+.svg" alt="">
+                </button>
+                <button 
+                    class="minus5">
+                    <img data-action="minus5" src="./assets/-.svg" alt="">
+                </button>
+            </section>
+        </div>
+        <div class="cards">
+            <span>
+                <img id="card1" class="" src="/assets/Card 01.svg" alt="">
+            </span>
+            <span>
+                <img id="card2" class="" src="/assets/Card 02.svg" alt="">
+            </span>
+            <span>
+                <img id="card3" class="" src="/assets/Card 03.svg" alt="">
+            </span>
+            <span>
+                <img id="card4" class="" src="/assets/Card 04.svg" alt="">
+            </span>
+        </div>
+    </div>
+</body>
+</html>
